@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Divide Calculator</title>
+    <style>
+        .s-1{
+            border-color: black;
+              width: 40px;
+              max-width: 85px;
+              min-width: 30px;
+              transition: 0.3s;
+              width: 45px;
+              color: rgb(36, 32, 32);
+              border-radius: 10px;
+              border-color: black;
+              margin-bottom: 5px;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              font-weight: bold;
+              cursor: pointer;
+              resize: vertical;
+              box-sizing: content-box;
+        }
+        .s-2{
+            border-color: black;
+             transition: 0.3s;
+             
+             color: rgb(36, 32, 32);
+             border-radius: 10px;
+             border-color: black;
+             margin-bottom: 5px;
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             font-weight: bold;
+             cursor: pointer;
+             
+        }
+    </style>
+</head>
+<body>
+	<h1>Devide Calculator</h1>
+	<form>
+		<label  class="s-1" for="num1">Number 1:</label><br>
+		<input  class="s-1" type="number" id="num1" name="num1"><br>
+		<label  class="s-1" for="num2">Number 2:</label><br>
+		<input  class="s-1" type="number" id="num2" name="num2"><br><br>
+		<button class="s-2" type="button" onclick="dev()">Calculate</button>
+	</form> 
+	<p id="result"></p>
+	
+	<script>
+	function dev() {
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		var result = parseInt(num1) / parseInt(num2);
+		document.getElementById("result").innerHTML = "Result: " + result;
+	}
+	</script>
+</body>
+</html>
